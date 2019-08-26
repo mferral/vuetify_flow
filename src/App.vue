@@ -1,36 +1,45 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-app-bar>
+    <div>
+       <v-toolbar>
+      <v-toolbar-title>{{title}}</v-toolbar-title>
 
+      <div class="flex-grow-1"></div>
+
+      <v-toolbar-items>
+        <v-btn text to="/">Home</v-btn>
+        <v-btn text>Link 2</v-btn>
+        <v-btn text to="/about">
+          About
+        </v-btn>
+      </v-toolbar-items>
+
+      <template v-if="$vuetify.breakpoint.smAndUp">
+        <v-btn icon>
+          <v-icon>mdi-export-variant</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-delete-circle</v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon>mdi-plus-circle</v-icon>
+        </v-btn>
+      </template>
+    </v-toolbar>
+    </div>
+    
     <v-content>
-      <HelloWorld/>
+      <router-view/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
+  name: 'App',  
   data: () => ({
     //
+    title: 'Vuetify Flow'
   }),
 };
 </script>
