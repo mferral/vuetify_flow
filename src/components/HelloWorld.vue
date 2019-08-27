@@ -22,12 +22,7 @@
           <br>please join our online
               <router-link to="/about">About</router-link>
         </p>
-      </v-flex>
-
-
-
-
-      
+      </v-flex>      
     </v-layout>
   </v-container>
 </template>
