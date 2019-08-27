@@ -8,7 +8,7 @@
 
       <v-toolbar-items>
         <v-btn text to="/">Home</v-btn>
-        <v-btn text>Link 2</v-btn>
+        <v-btn text to="/page1">Page 1</v-btn>
         <v-btn text to="/about">
           About
         </v-btn>
