@@ -32,7 +32,7 @@
             :loading="posts.loading"
             :disabled="!valid || posts.loading"
             @click.prevent="guardar">
-              Save              
+              Guardar              
             </v-btn>
           </v-container>
         </v-form>
