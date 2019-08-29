@@ -60,7 +60,7 @@
     methods: {
       ...mapActions(["GET_POST","EDIT_POST"]),
       guardar(){
-        if (this.$refs.form.validate()) {          
+        if (this.$refs.form.validate()) {
           this.EDIT_POST(this.posts.post);
         }
       }
