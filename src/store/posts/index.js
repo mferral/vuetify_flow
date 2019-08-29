@@ -5,8 +5,7 @@ export default {
     state: {
         post: {},
         list:[],
-        loading: false,
-        loadingSave: false
+        loading: false
     },
     mutations,
     actions

@@ -3,7 +3,7 @@ import router from '../../routes'
 
 /* eslint-disable */
 export const actions={
-    LIST_POST: ({ state, commit }) => {    
+    LIST_POST: ({ commit }) => {    
         commit("SET_POST_LIST", []);
         commit("SET_LOADING",true);
         HTTP.get('posts').then(res=>{            
@@ -14,7 +14,7 @@ export const actions={
             console.log(error);                
         });
     },
-    GET_POST: ({ state, commit }, id) => {    
+    GET_POST: ({ commit }, id) => {    
         HTTP.get('posts/'+ id).then(res=>{                                                  
             commit("SET_POST",res.data);
         },
@@ -22,10 +22,10 @@ export const actions={
             console.log(error);
         });
     },
-    ADD_POST: ({ state, commit }, params) => {
-        commit("SET_LOADINGSAVE",true);
+    ADD_POST: ({ commit }, params) => {
+        commit("SET_LOADING",true);
         HTTP.post('posts', params).then(res=>{                                                  
-            commit("SET_LOADINGSAVE",false);
+            commit("SET_LOADING",false);
             console.log(res.data);            
             router.push({ name: 'post-list'});
         },
@@ -33,10 +33,10 @@ export const actions={
             console.log(error);
         });
     },
-    EDIT_POST: ({ state, commit }, params) => {
-        commit("SET_LOADINGSAVE",true);
+    EDIT_POST: ({ commit }, params) => {
+        commit("SET_LOADING",true);
         HTTP.put('posts/'+params.id, params).then(res=>{                                                  
-            commit("SET_LOADINGSAVE",false);
+            commit("SET_LOADING",false);
             console.log(res.data);      
             router.push({ name: 'post-list'});
         },

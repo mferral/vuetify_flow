@@ -7,8 +7,5 @@ export const mutations={
     },
     SET_LOADING:(state,val)=>{
         state.loading = val
-    }, 
-    SET_LOADINGSAVE:(state,val)=>{
-        state.loadingSave = val
-    }, 
+    }
 }

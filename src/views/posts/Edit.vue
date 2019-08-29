@@ -29,8 +29,8 @@
             </v-row>
             <v-btn color="success" 
             class="mr-4"             
-            :loading="posts.loadingSave"
-            :disabled="!valid || posts.loadingSave"
+            :loading="posts.loading"
+            :disabled="!valid || posts.loading"
             @click.prevent="guardar">
               Save              
             </v-btn>
