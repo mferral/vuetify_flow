@@ -1,6 +1,11 @@
 <template>
 <div>
   <v-container grid-list-md >
+    <div class="mb-5 text-center">
+      <h1 class="display-1">Cervezas</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit vel velit nisi suscipit, quae quas aspernatur illo rem sequi hic. Perferendis enim quis esse rerum quia quisquam soluta fuga debitis.</p>
+      <hr>
+    </div>
     <v-row flex-no-wrap>
         <v-card
         v-for="item in beers.list" :key="item.id" 
@@ -9,8 +14,8 @@
         >
       <v-list-item>
         <v-list-item-content>
-          <v-list-item-title class="headline">Nombre</v-list-item-title>
-          <v-list-item-subtitle>Estilo</v-list-item-subtitle>
+          <v-list-item-title class="headline">{{item.name}}</v-list-item-title>
+          <v-list-item-subtitle>{{item.estilo}}</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
