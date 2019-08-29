@@ -4,6 +4,9 @@
     <div class="mb-5 text-center">
       <h1 class="display-1">Cervezas</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit vel velit nisi suscipit, quae quas aspernatur illo rem sequi hic. Perferendis enim quis esse rerum quia quisquam soluta fuga debitis.</p>
+
+      <v-btn class="ma-2" tile outlined color="success" to="/beer2/add">Agregar</v-btn>
+
       <hr>
     </div>
     <v-row flex-no-wrap>
