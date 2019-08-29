@@ -27,9 +27,11 @@
             <v-list-item-subtitle v-text="item.id"></v-list-item-subtitle>
           </v-list-item-content>
           <v-list-item-action>
-            <v-btn icon>
+            
+            <v-btn icon :to="{name: 'post-edit' , params : {id : item.id }}">
               <v-icon color="grey lighten-1">edit</v-icon>
             </v-btn>
+            
           </v-list-item-action>
         </v-list-item>
       </v-list>
