@@ -6,7 +6,7 @@ export default [
     {
         path: '/beer2/list',
         component: List,
-        name:"/beer2-list"
+        name:"beer2-list"
     },
     {
         path: '/beer2/add',

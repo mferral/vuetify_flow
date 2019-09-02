@@ -5,7 +5,6 @@
     <div class="mb-5 text-center">
       <h1 class="display-1">Cervezas</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit vel velit nisi suscipit, quae quas aspernatur illo rem sequi hic. Perferendis enim quis esse rerum quia quisquam soluta fuga debitis.</p>
-      <hr>
     </div>
     {{post}}
     <v-form ref="form" v-model="valid" lazy-validation >
@@ -63,10 +62,10 @@
       ...mapState(["posts"])
     },
     methods: {
-      ...mapActions(["ADD_POST"]),
+      ...mapActions(["ADD_BEERS"]),
       guardar(){
         if (this.$refs.form.validate()) {                   
-          this.ADD_POST(this.post);
+          this.ADD_BEERS(this.post);
         }
       }
     }

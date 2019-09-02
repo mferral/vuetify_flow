@@ -1,14 +1,18 @@
 <template>
 <div>
-  <v-container grid-list-md >
+  <v-container>
     <div class="mb-5 text-center">
       <h1 class="display-1">Cervezas</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit vel velit nisi suscipit, quae quas aspernatur illo rem sequi hic. Perferendis enim quis esse rerum quia quisquam soluta fuga debitis.</p>
 
       <v-btn class="ma-2" tile outlined color="success" to="/beer2/add">Agregar</v-btn>
 
-      <hr>
     </div>
+        <v-progress-linear 
+          :active="beers.loading"
+          :indeterminate="beers.loading"        
+        >
+        </v-progress-linear>
     <v-row flex-no-wrap>
         <v-card
         v-for="item in beers.list" :key="item.id" 
