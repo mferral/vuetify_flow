@@ -42,6 +42,7 @@
         <v-btn
           text
           color="blue"
+          :to="{name: 'post-edit' , params : {id : item.id }}"
         >
           Editar
         </v-btn>

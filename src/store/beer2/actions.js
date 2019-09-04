@@ -25,5 +25,24 @@ export const actions={
         error=>{            
             console.log(error);
         });
+    },
+    GET_BEER: ({ commit }, id) => {    
+        HTTP.get('beers/'+ id).then(res=>{                                                  
+            commit("SET_POST",res.data);
+        },
+        error=>{            
+            console.log(error);
+        });
+    },
+    EDIT_BEER: ({ commit }, params) => {
+        commit("SET_LOADING",true);
+        HTTP.put('beers/'+params.id, params).then(res=>{                                                  
+            commit("SET_LOADING",false);
+            console.log(res.data);      
+            router.push({ name: 'beer2-list'});
+        },
+        error=>{            
+            console.log(error);
+        });
     }
 }
