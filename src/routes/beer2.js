@@ -14,7 +14,7 @@ export default [
         name:"beer2-add"
     },
     {
-        path: '/beer2/edit',
+        path: '/beer2/edit/:id',
         component: Edit,
         name:"beer2-edit"
     }

@@ -28,7 +28,7 @@ export const actions={
     },
     GET_BEER: ({ commit }, id) => {    
         HTTP.get('beers/'+ id).then(res=>{                                                  
-            commit("SET_POST",res.data);
+            commit("SET_BEER",res.data);
         },
         error=>{            
             console.log(error);

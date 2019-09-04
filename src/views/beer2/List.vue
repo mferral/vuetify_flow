@@ -15,7 +15,7 @@
         </v-progress-linear>
     <v-row flex-no-wrap>
         <v-card
-        v-for="item in beers.list" :key="item.id" 
+        v-for="item in beers.beerlist" :key="item.id" 
         max-width="344"
         class="mx-auto"    
         >
@@ -42,7 +42,7 @@
         <v-btn
           text
           color="blue"
-          :to="{name: 'post-edit' , params : {id : item.id }}"
+          :to="{name: 'beer2-edit' , params : {id : item.id }}"
         >
           Editar
         </v-btn>

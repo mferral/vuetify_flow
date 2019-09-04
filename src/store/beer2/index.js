@@ -3,7 +3,7 @@ import { actions } from './actions'
 
 export default {
     state: {
-        post:{},
+        beerpost:{},
         list:[],
         loading: false
     },
